@@ -32,52 +32,68 @@
                 margin: 70px;
                 border: 1px solid #4CAF50;
             }
+             #customers {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #customers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+            #customers tr:hover {background-color: #ddd;}
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
         </style>
     <title>Ürün Sayfası</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div <p> <br/>
+<div id="temas-form" <p> <br/>
         <figure> 
         <img  <img src="../../../../Desktop/Yeni klasör (3)/image.jpg" width="304" height="228" >
-                </figure>
-
+         </figure>       
 
         İkinci El eşyalarınızı satmak istiyorsanız doğru adrestesiniz.<br/>
-        Aşağıya satmak istediğiniz ürünün bilgilerini giriniz.
-    <table style="background-color:#e7e7e7">
-        <tr>
-            <th>Kullanıcı Adı</th>
-            <th>Kategori Adı</th>
-            <th>Eşya Adı</th>
-            <th>Marka</th>
-            <th>Fiyat</th>
-            <th>Şehir</th>
-        </tr>
-        <tr>
-            <td>elifozturk</td>
-            <td>Moda ve Aksesuar</td>
-            <td>Kazak</td>
-            <td>Zara</td>
-            <td>50 TL</td>
-            <td>İstanbul</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-</p><br/><br/></div><br/>
-
-<h1>Kategoriye göre ara👀</h1><br/>
-<button class="button button1">Elektronik</button>
-<button class="button button2">Spor,Eğlence ve Oyunlar</button>
-<button class="button button3">Taşıt</button>
-<button class="button button4">Ev ve Arsa</button>
-<button class="button button5">Moda ve Aksesuar</button>
-<button class="button button1">Çocuk ve Bebek</button>
-<button class="button button2">Müzik,Film</button>
-<div></div>
+        Aşağıya satmak istediğiniz ürünün bilgilerini giriniz.<br/><pre></pre>
+   
+       <form id="temas" method="post" action="">
+       <fieldset>
+ 
+       <label for="kullaniciad">Kullanıcı adı</label>
+       <input type="text" ad="ad">
+           
+       <label for="kategoriadi">Kategori adı</label>
+       <input type="text" ad="ad">
+       
+       <label for="esyaad">Eşya adı</label>
+       <input type="text" ad="ad">
+       
+       <label for="marka">Marka</label>
+       <input type="text" ad="ad">
+           
+       <label for="fiyat">Fiyat</label>
+       <input type="int" ad="fiyat"><br/> <br/>
+           
+           <input type="submit" ad="submit" id="submit" value="Ekle" /> 
+           <input type="reset" value="Bilgileri Temizle" align="center"></input> <pre></pre>
+        <textarea></textarea>
+       
+       </fieldset>
+            </form> 
+        
+       </div>
 </body>
 </html>
+ 
