@@ -12,28 +12,6 @@
                 margin: 30px;
                 border: 1px solid #4CAF50;
             }
-            #customers {
-                font-family: Arial, Helvetica, sans-serif;
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            #customers td, #customers th {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-
-            #customers tr:nth-child(even){background-color: #f2f2f2;}
-
-            #customers tr:hover {background-color: #ddd;}
-
-            #customers th {
-                padding-top: 12px;
-                padding-bottom: 12px;
-                text-align: left;
-                background-color: #4CAF50;
-                color: white;
-            }
             .button {
                 background-color: #008CBA; /* Green */
                 border:10px solid #73AD21;
@@ -44,127 +22,171 @@
                 display: inline-block;
                 font-size: 16px;
             }
+            * {
+                box-sizing: border-box;
+            }
+
+            #myInput {
+                background-image: url('/css/searchicon.png');
+                background-position: 10px 10px;
+                background-repeat: no-repeat;
+                width: 100%;
+                font-size: 16px;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+
+            #mylist {
+
+                background-position: 10px 10px;
+                background-repeat: no-repeat;
+                width: 20%;
+                font-size: 16px;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+
+            #myTable {
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #ddd;
+                font-size: 18px;
+            }
+
+            #myTable th, #myTable td {
+                text-align: left;
+                padding: 12px;
+            }
+
+            #myTable tr {
+                border-bottom: 1px solid #ddd;
+            }
+
+            #myTable tr.header, #myTable tr:hover {
+                background-color: #f1f1f1;
+            }
 
 
-        </style>
+        </style> 
+        <meta charset="UTF-8">
     <title>Satış Sayfası</title>
-    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function myFunction() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("mylist");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <pre></pre>
 
-<div>Aradığınız herhangi bir kategori varsa seçebilirsiniz...
-    <select name="Kategori" style="animation: ">
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Beyaz Eşya</option>
-        <option>Spor</option>
-        <option>Eğlence ve Oyun</option>
-        <option>Taşıt</option>
-        <option>Ev ve Arsa</option>
-        <option>Moda ve Aksesuar</option>
-        <option>Çocuk ve Bebek</option>
-        <option>Kitap</option>
-        <option>Müzik</option>
-        <option>Film</option>
-    </select>
-    <p>Popüler ürünlere göz atın👀</p>
+<div><h2>Aradığınız herhangi bir kategori varsa seçebilirsiniz...</h2> 
+    <h2>Popüler ürünlere göz atın👀</h2>
 
     <table id="customers">
+       
+    </table><br/>
+<select id="mylist" onchange="myFunction()" class='form-control'>
+<option>Kategori</option>
+<option>Elektronik</option>
+<option>Beyaz Eşya</option>
+<option>Spor</option>
+<option>Eğlence ve Oyun</option>
+<option>Taşıt</option>
+<option>Ev ve Arsa</option>
+<option>Moda ve Aksesuar</option>
+<option>Çocuk ve Bebek</option>
+<option>Kitap</option>
+<option>Müzik</option>
+<option>Film</option>
+</select>
+
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:40%;">Kategori</th>
+    <th style="width:40%;">İsim Soyisim</th>
+    <th style="width:40%">Marka</th>
+    <th style="width: 40%">Eşya adı</th>
+    <th style="width: 40%">Fiyat</th>
+    <th style="width: 40%">Şehir</th>
+  </tr>
         <tr>
-            <th>İsim Soyisim</th>
-            <th>Kategori</th>
-            <th>Eşya adı</th>
-            <th>Marka</th> 
-            <th>Fiyat</th>
-            <th>Şehir</th>
-        </tr>
-        <tr>
-            <td>Elif Öztürk</td>
             <td>Moda ve Aksesuar</td>
+            <td>Elif Öztürk</td>
             <td>Kazak</td>
             <td>Zara</td>
             <td>50 TL</td>
             <td>İstanbul</td>
         </tr>
-        <tr>
-            <td>Emir Kaya</td>
+        <tr> 
             <td>Taşıt</td>
+            <td>Emir Kaya</td>
             <td>Araba</td>
             <td>Honda</td>
             <td>100.000 TL</td>
             <td>Amasya</td>
         </tr>
         <tr>
-            <td>Esra Demir</td>
             <td>Beyaz Eşya</td>
+            <td>Esra Demir</td>
             <td>Bulaşık Makinesi</td>
             <td>Arçelik</td>
             <td>1.500 TL</td>
             <td>İzmir</td>
         </tr>
         <tr>
+            <td>Beyaz Eşya</td>
             <td>Sinem Öztürk</td>
-            <td></td>
             <td>Elektrikli Süpürge</td>
             <td>Diğer</td>
             <td>300 TL </td>
             <td>Trabzon</td>
         </tr>
-        <tr>
-            <td>Pelin Aslan</td>
+        <tr> 
             <td>Kitap</td>
+            <td>Pelin Aslan</td>
             <td>Kitap</td>
             <td>Diğer</td>
             <td>10 TL</td>
             <td>Kastamonu</td>
         </tr>
         <tr>
-            <td>Ahmet Yener</td>
             <td>Elektronik</td>
+            <td>Ahmet Yener</td>
             <td>Cep Telefonu</td>
             <td>Samsung</td>
             <td>1.000 TL</td>
             <td>İstanbul</td>
         </tr>
         <tr>
-            <td>Kemal Sarı</td>
             <td>Moda ve Aksesuar</td>
+            <td>Kemal Sarı</td>
             <td>Toka</td>
             <td>Diğer</td>
             <td>10 TL</td>
             <td>Düzce</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table><br/>
-    <a href="mesaj.html" target="_blank" class="button button" >Mesaj</a> 
-
+</table><pre/><br/>
+<a href="mesaj.html" target="_blank" class="button button" >Mesaj</a> 
 </div>
-
-<div></div>
 </body>
 </html>
