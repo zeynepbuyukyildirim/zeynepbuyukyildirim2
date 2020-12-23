@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            body{
+                font-family: Verdana,Arial,sans-serif;
+                font-size: 14px;
+                background: silver;
+            }
+            div {
+                margin: 30px;
+                border: 1px solid #4CAF50;
+            }
+            option{
+                font-size: 15px;
+                background: ghostwhite; 
+            }
+            select{
+                background: repeat;
+                width: 130px;
+                height: 37px;
+                position: relative;
+            }
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 30px 60px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 30px;
+            }
+            * {
+                box-sizing: border-box;
+            }
+
+            #myInput {
+                background-image: url('/css/searchicon.png');
+                background-position: 10px 10px;
+                background-repeat: no-repeat;
+                width: 100%;
+                font-size: 16px;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+
+            #mylist {
+
+                background-position: 10px 10px;
+                background-repeat: no-repeat;
+                width: 20%;
+                font-size: 16px;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+
+            #myTable {
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #ddd;
+                font-size: 18px;
+            }
+
+            #myTable th, #myTable td {
+                text-align: left;
+                padding: 12px;
+            }
+
+            #myTable tr {
+                border-bottom: 1px solid #ddd;
+            }
+
+            #myTable tr.header, #myTable tr:hover {
+                background-color: #f1f1f1;
+            }
+        </style>
+
+    <meta charset="UTF-8">
+    <title>Şehre Göre Ayır..</title>
+    <script type="text/javascript">
+        function myFunction() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("mylist");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <img src="../../../../Desktop/turkiye-siyasi-haritasi2.png" width="500" height="300" /><pre></pre>
+     
+    <select id="mylist" onchange="myFunction()" class='form-control'>
+        <option></option>
+        <option>İstanbul</option>
+        <option>Ankara</option>
+        <option>İzmir</option>
+        <option>Bursa</option>
+        <option>Adana</option>
+        <option>Gaziantep</option>
+        <option>Konya</option>
+        <option>Antalya</option>
+        <option>Kayseri</option>
+        <option>Mersin</option>
+        <option>Eskişehir</option>
+        <option>Diyarbakır</option>
+        <option>Samsun</option>
+        <option>Denizli</option>
+        <option>Şanlıurfa</option>
+        <option>Malatya</option>
+        <option>Erzurum</option>
+        <option>Van</option>
+        <option>Batman</option>
+        <option>Niğde</option>
+        <option>Düzce</option>
+        <option>Trabzon</option>
+        <option>Amasya</option>
+        <option>Kastamonu</option>
+        <option>Tokat</option>
+    </select>
+    <table id="myTable">
+  <tr class="header">
+    <th style="width:40%;">Şehir</th>
+    <th style="width:40%;">İsim Soyisim</th>
+    <th style="width:40%">Marka</th>
+    <th style="width: 40%">Eşya adı</th>
+    <th style="width: 40%">Fiyat</th>
+    <th style="width: 40%">Kategori</th>
+  </tr>
+        <tr>
+            <td>İstanbul</td> 
+            <td>Elif Öztürk</td>
+            <td>Kazak</td>
+            <td>Zara</td>
+            <td>50 TL</td>
+            <td>Moda ve Aksesuar</td>
+        </tr>
+        <tr> 
+            <td>Amasya</td>
+            <td>Emir Kaya</td>
+            <td>Araba</td>
+            <td>Honda</td>
+            <td>100.000 TL</td>
+            <td>Taşıt</td>
+        </tr>
+        <tr>
+            <td>İzmir</td>
+            <td>Esra Demir</td>
+            <td>Bulaşık Makinesi</td>
+            <td>Arçelik</td>
+            <td>1.500 TL</td>
+            <td>Beyaz Eşya</td>
+        </tr>
+        <tr>
+            <td>Trabzon</td>
+            <td>Sinem Öztürk</td>
+            <td>Elektrikli Süpürge</td>
+            <td>Diğer</td>
+            <td>300 TL </td>
+            <td>Beyaz Eşya</td>
+        </tr>
+        <tr> 
+            <td>Kastamonu</td>
+            <td>Pelin Aslan</td>
+            <td>Kitap</td>
+            <td>Diğer</td>
+            <td>10 TL</td>
+            <td>Kitap</td>
+        </tr>
+        <tr>
+            <td>İstanbul</td>
+            <td>Ahmet Yener</td>
+            <td>Cep Telefonu</td>
+            <td>Samsung</td>
+            <td>1.000 TL</td>
+            <td>Elektronik</td>
+        </tr>
+        <tr>
+            <td>Düzce</td>
+            <td>Kemal Sarı</td>
+            <td>Toka</td>
+            <td>Diğer</td>
+            <td>10 TL</td>
+            <td>Moda ve Aksesuar</td>
+</table><pre/><br/>
+</div>
+
+</body>
+</html>
