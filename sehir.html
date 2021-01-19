@@ -6,21 +6,31 @@
             body{
                 font-family: Verdana,Arial,sans-serif;
                 font-size: 14px;
-                background: skyblue;
+                background: silver;
             }
             div {
                 margin: 30px;
                 border: 1px solid #4CAF50;
             }
+            option{
+                font-size: 15px;
+                background: ghostwhite; 
+            }
+            select{
+                background: repeat;
+                width: 130px;
+                height: 37px;
+                position: relative;
+            }
             .button {
-                background-color: #008CBA; /* Green */
-                border:10px solid #73AD21;
+                background-color: #4CAF50; /* Green */
+                border: none;
                 color: white;
-                padding: 15px 32px;
+                padding: 30px 60px;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
-                font-size: 16px;
+                font-size: 30px;
             }
             * {
                 box-sizing: border-box;
@@ -67,11 +77,10 @@
             #myTable tr.header, #myTable tr:hover {
                 background-color: #f1f1f1;
             }
+        </style>
 
-
-        </style> 
-        <meta charset="UTF-8">
-    <title>Satış Sayfası</title>
+    <meta charset="UTF-8">
+    <title>Şehre Göre Ayır..</title>
     <script type="text/javascript">
         function myFunction() {
             var input, filter, table, tr, td, i;
@@ -90,103 +99,108 @@
                 }
             }
         }
-
-
     </script>
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <pre></pre>
-
-<div><h2>Aradığınız herhangi bir kategori varsa seçebilirsiniz...</h2> 
-    <h2>Popüler ürünlere göz atın👀</h2>
-
-    <table id="customers">
-       
-    </table><br/>
-<select id="mylist" onchange="myFunction()" class='form-control'>
-<option>Kategori</option>
-<option>Elektronik</option>
-<option>Beyaz Eşya</option>
-<option>Spor</option>
-<option>Eğlence ve Oyun</option>
-<option>Taşıt</option>
-<option>Ev ve Arsa</option>
-<option>Moda ve Aksesuar</option>
-<option>Çocuk ve Bebek</option>
-<option>Kitap</option>
-<option>Müzik</option>
-<option>Film</option>
-</select>
-
-
-<table id="myTable">
+<div class="container">
+    <img src="../../../../Desktop/turkiye-siyasi-haritasi2.png" width="500" height="300" /><pre></pre>
+     
+    <select id="mylist" onchange="myFunction()" class='form-control'>
+        <option></option>
+        <option>İstanbul</option>
+        <option>Ankara</option>
+        <option>İzmir</option>
+        <option>Bursa</option>
+        <option>Adana</option>
+        <option>Gaziantep</option>
+        <option>Konya</option>
+        <option>Antalya</option>
+        <option>Kayseri</option>
+        <option>Mersin</option>
+        <option>Eskişehir</option>
+        <option>Diyarbakır</option>
+        <option>Samsun</option>
+        <option>Denizli</option>
+        <option>Şanlıurfa</option>
+        <option>Malatya</option>
+        <option>Erzurum</option>
+        <option>Van</option>
+        <option>Batman</option>
+        <option>Niğde</option>
+        <option>Düzce</option>
+        <option>Trabzon</option>
+        <option>Amasya</option>
+        <option>Kastamonu</option>
+        <option>Tokat</option>
+    </select>
+    <table id="myTable">
   <tr class="header">
-    <th style="width:40%;">Kategori</th>
+    <th style="width:40%;">Şehir</th>
     <th style="width:40%;">İsim Soyisim</th>
     <th style="width:40%">Marka</th>
     <th style="width: 40%">Eşya adı</th>
     <th style="width: 40%">Fiyat</th>
-    <th style="width: 40%">Şehir</th>
+    <th style="width: 40%">Kategori</th>
   </tr>
         <tr>
-            <td>Moda ve Aksesuar</td>
+            <td>İstanbul</td> 
             <td>Elif Öztürk</td>
             <td>Kazak</td>
             <td>Zara</td>
             <td>50 TL</td>
-            <td>İstanbul</td>
+            <td>Moda ve Aksesuar</td>
         </tr>
         <tr> 
-            <td>Taşıt</td>
+            <td>Amasya</td>
             <td>Emir Kaya</td>
             <td>Araba</td>
             <td>Honda</td>
             <td>100.000 TL</td>
-            <td>Amasya</td>
+            <td>Taşıt</td>
         </tr>
         <tr>
-            <td>Beyaz Eşya</td>
+            <td>İzmir</td>
             <td>Esra Demir</td>
             <td>Bulaşık Makinesi</td>
             <td>Arçelik</td>
             <td>1.500 TL</td>
-            <td>İzmir</td>
+            <td>Beyaz Eşya</td>
         </tr>
         <tr>
-            <td>Beyaz Eşya</td>
+            <td>Trabzon</td>
             <td>Sinem Öztürk</td>
             <td>Elektrikli Süpürge</td>
             <td>Diğer</td>
             <td>300 TL </td>
-            <td>Trabzon</td>
+            <td>Beyaz Eşya</td>
         </tr>
         <tr> 
-            <td>Kitap</td>
+            <td>Kastamonu</td>
             <td>Pelin Aslan</td>
             <td>Kitap</td>
             <td>Diğer</td>
             <td>10 TL</td>
-            <td>Kastamonu</td>
+            <td>Kitap</td>
         </tr>
         <tr>
-            <td>Elektronik</td>
+            <td>İstanbul</td>
             <td>Ahmet Yener</td>
             <td>Cep Telefonu</td>
             <td>Samsung</td>
             <td>1.000 TL</td>
-            <td>İstanbul</td>
+            <td>Elektronik</td>
         </tr>
         <tr>
-            <td>Moda ve Aksesuar</td>
+            <td>Düzce</td>
             <td>Kemal Sarı</td>
             <td>Toka</td>
             <td>Diğer</td>
             <td>10 TL</td>
-            <td>Düzce</td>
+            <td>Moda ve Aksesuar</td>
 </table><pre/><br/>
-<a href="mesaj.html" target="_blank" class="button button" >Mesaj</a> 
 </div>
+
 </body>
 </html>
